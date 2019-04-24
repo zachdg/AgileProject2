@@ -1,7 +1,7 @@
 {
   "name": "project",
   "version": "1.0.0",
-  "description": "",
+  "description": "Online Shoe Store",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -20,5 +20,13 @@
     "mongodb": "^3.2.3",
     "mongoose": "^5.4.22",
     "url": "^0.11.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zachdg/AgileProject2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zachdg/AgileProject2/issues"
+  },
+  "homepage": "https://github.com/zachdg/AgileProject2#readme"
 }
