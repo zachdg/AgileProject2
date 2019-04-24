@@ -1,0 +1,39 @@
+body {
+    background-image: url("../images/backgound.jpg");
+    background-size: 1920px 1080px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+}
+
+.wrapper {
+    height: 100%;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    height: 25px;
+    background-color: white;
+    opacity: 0.5;
+}
+
+#sign_in {
+    width: 300px;
+    margin-top: 30px;
+    margin-left: 500px;
+    padding: 20px;
+    background-color: white;
+}
+
+#login {
+    width: 300px;
+    margin-top: 30px;
+    margin-left: 500px;
+    padding: 20px;
+    background-color: white;
+}

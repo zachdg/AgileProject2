@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{sign_up}}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
+
+</head>
+<body class="background">
+{{>nav_bar}}
+<div class="wrapper">
+    <div id="sign_in">
+        <h1>Sign up</h1>
+        {{#if error}}
+            {{#each error }}
+                <p class="alert alert-danger">{{this}}</p>
+            {{/each}}
+        {{/if}}
+        {{#if message}}
+            <p class="bg-success">{{message}}</p>
+        {{/if}}
+        <form action="/insert" method="post">
+            <label>E-mail:</label><br> <input id="email" name="email" minlength="5" maxlength="30" type="text" size="30"><br>
+            <label>Password:</label><br> <input id="pwd" name="pwd" minlength="5" maxlength="15" type="password" size="20"><br>
+            <label>Enter Password Again:</label><br> <input id="pwd2" minlength="5" maxlength="15" name="pwd2" type="password" size="20"><br>
+            <br>
+            <input type="submit" value="create account">
+    </div>
+    <br>
+    {{message}}
+
+    </form>
+    {{>footer}}
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</div>
+</body>
+</html>

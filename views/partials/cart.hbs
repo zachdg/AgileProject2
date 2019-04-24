@@ -1,0 +1,32 @@
+
+
+{{# each products}}
+    <div class="container">
+        <div class="row">
+            {{# each this}}
+                <div class="col">
+                    <!--Card 1 -->
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-10">
+                                    <h5 class="card-title">{{name}}</h5>
+                                    <p class="card-text">Price: ${{price}}</p>
+                                    <form action="/delete-item" method="post">
+                                        <input type="submit" name="{{name}}" class="btn btn-primary" value="Remove">
+                                        <input type="hidden" value="{{_id}}" name="cart_id">
+                                    </form>
+                                </div>
+                                <div class="col-2 ml-auto">
+                                    <img class="card-img-top ml-auto" src="{{path}}" alt="Card image cap">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Card 1 end-->
+                </div>
+            {{/each}}
+        </div>
+    </div>
+    <br>
+{{/each}}
